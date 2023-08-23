@@ -12,13 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const agregarBtn = document.getElementById("agregar");
     const limpiarBtn = document.getElementById("limpiar");
   
-    // Cargar el listado desde el almacenamiento local al iniciar
     const listadoGuardado = JSON.parse(localStorage.getItem("listado")) || [];   
     
     
-    // Función para actualizar la vista del listado
     function actualizarVista() {
-      contenedor.innerHTML = ""; // Limpiar el contenido actual
+      contenedor.innerHTML = ""; 
 
       for (const item of listadoGuardado) {
         const li = document.createElement("li");
@@ -34,18 +32,16 @@ document.addEventListener("DOMContentLoaded", function () {
           listadoGuardado.push(nuevoItem);
           localStorage.setItem("listado", JSON.stringify(listadoGuardado));
           actualizarVista();
-          itemInput.value = ""; // Limpiar el campo de entrada de texto
+          itemInput.value = "";
         }
       });
 
-       // Limpiar el listado y actualizar la vista
   limpiarBtn.addEventListener("click", function () {
-    listadoGuardado.length = 0; // Vaciar el listado
-    localStorage.removeItem("listado"); // Eliminar el listado del almacenamiento local
+    listadoGuardado.length = 0;
+    localStorage.removeItem("listado"); 
     actualizarVista();
   });
 
-  // Actualizar la vista inicial
   actualizarVista();
 
   });
