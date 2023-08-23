@@ -1,4 +1,10 @@
 
+limpiar.addEventListener("click", function() {
+    contenedor.innerHTML = "";
+    localStorage.removeItem("items");
+  });
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const contenedor = document.getElementById("contenedor");
