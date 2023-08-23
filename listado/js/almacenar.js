@@ -1,4 +1,4 @@
-// almacenar.js
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const contenedor = document.getElementById("contenedor");
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Función para actualizar la vista del listado
     function actualizarVista() {
       contenedor.innerHTML = ""; // Limpiar el contenido actual
-  
+      
       for (const item of listadoGuardado) {
         const li = document.createElement("li");
         li.textContent = item;
@@ -26,3 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
   
+
+  
+
