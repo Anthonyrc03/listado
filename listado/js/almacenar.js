@@ -1,4 +1,4 @@
-// almacenar.js
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const contenedor = document.getElementById("contenedor");
@@ -11,3 +11,4 @@ document.addEventListener("DOMContentLoaded", function () {
   
 })
   
+
