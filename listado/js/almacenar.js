@@ -31,7 +31,17 @@ document.addEventListener("DOMContentLoaded", function () {
           itemInput.value = ""; // Limpiar el campo de entrada de texto
         }
       });
-  
+
+       // Limpiar el listado y actualizar la vista
+  limpiarBtn.addEventListener("click", function () {
+    listadoGuardado.length = 0; // Vaciar el listado
+    localStorage.removeItem("listado"); // Eliminar el listado del almacenamiento local
+    actualizarVista();
+  });
+
+  // Actualizar la vista inicial
+  actualizarVista();
+
   });
   
 
