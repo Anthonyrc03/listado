@@ -1,16 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const agregarButton = document.getElementById('agregar');
-    const contenedor = document.getElementById('contenedor');
-    const itemInput = document.getElementById('item');
 
-    agregarButton.addEventListener('click', function() {
-      const nuevoItem = itemInput.value;
-      if (nuevoItem.trim() !== '') {
-        const nuevoElementoLista = document.createElement('li');
-        nuevoElementoLista.className = 'list-group-item';
-        nuevoElementoLista.textContent = nuevoItem;
-        contenedor.appendChild(nuevoElementoLista);
-        itemInput.value = ''; 
-      }
-    });
-  });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contenedor = document.getElementById("contenedor");
+    const itemInput = document.getElementById("item");
+    const agregarBtn = document.getElementById("agregar");
+    const limpiarBtn = document.getElementById("limpiar");
+  
+    // Cargar el listado desde el almacenamiento local al iniciar
+    const listadoGuardado = JSON.parse(localStorage.getItem("listado")) || [];
+  
+})
+  
+
