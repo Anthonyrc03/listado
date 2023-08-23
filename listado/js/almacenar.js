@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Función para actualizar la vista del listado
     function actualizarVista() {
       contenedor.innerHTML = ""; // Limpiar el contenido actual
-      
+
       for (const item of listadoGuardado) {
         const li = document.createElement("li");
         li.textContent = item;
@@ -21,6 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
         contenedor.appendChild(li);
       }
     }
+
+    agregarBtn.addEventListener("click", function () {
+        const nuevoItem = itemInput.value.trim();
+        if (nuevoItem !== "") {
+          listadoGuardado.push(nuevoItem);
+          localStorage.setItem("listado", JSON.stringify(listadoGuardado));
+          actualizarVista();
+          itemInput.value = ""; // Limpiar el campo de entrada de texto
+        }
+      });
   
   });
   
